@@ -1,0 +1,3 @@
+#!/bin/bash
+
+pintos -q run hello

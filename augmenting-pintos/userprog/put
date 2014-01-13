@@ -1,0 +1,6 @@
+#!/bin/bash
+
+make -C ../../examples
+pintos -p ../../examples/hello -a hello -- -f -q
+pintos -p ../../examples/echo -a 'echo' -- -q
+./start

@@ -1,0 +1,111 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<title>CS330: Assignment 1</title>
+</head>
+
+<body bgcolor="linen">
+<h1>Assignment 1: Message Queues</h1>
+
+<b>Deadline: <u>28th August, 2012 (IST) </u></b> 
+<br> <br>
+A <b>penalty of 20% per day</b> would be imposed for late submission.
+<br><br>
+This assignment is to be implemented in <b>three</b> person teams.
+
+
+<h2>Objective</h2>
+
+<h3>Part 1</h3>
+Read, understand and summarize the POSIX message queues. A good place to begin is <a href="http://linux.die.net/man/7/mq_overview">mq_overview</a>.
+
+<h3>Part 2</h3>
+You are required to implement a subset of the POSIX interface to the 
+message queues in Pintos. The following functions (with the exact 
+prototype as provided in the POSIX interface) must be implemented:
+<br>
+<tt>
+<br>
+<table frame="BOX" rules="NONE" border="3">
+<tbody><tr><td>
+<br>
+mqd_t mq_open(const char *name, int oflag);
+<br>
+<br>
+int mq_send(mqd_t mqdes, const char *msg_ptr, size_t msg_len, unsigned msg_prio);
+<br>
+<br>
+ssize_t mq_receive(mqd_t mqdes, char *msg_ptr, size_t msg_len, unsigned *msg_prio);
+<br>
+<br>
+int mq_close(mqd_t mqdes);
+<br>
+<br>
+</td></tr></tbody></table>
+</tt>
+<br>
+
+Note that the above functions must be implemented as system calls in Pintos. The parameter <tt>name</tt> in <tt>mq_open()</tt>
+ may be any string to serve as a common identity for a message queue 
+(i.e. it need not be a file-system path as required by the POSIX calls).
+
+<h3>Part 3</h3>
+Use your (above) implementation of message queues in Pintos to solve the Producer-Consumer problem (discussed in class).
+
+
+<h2>Deliverables</h2>
+
+The Assignment is to be submitted in <tt>{rollnumber1_rollnumber2_rollnumber3}.tar.gz</tt> format. The compressed file should contain following -
+<ul>
+<li><b>Source Code: </b>Complete Pintos source code <b><i>after cleaning off all binaries</i></b> (<b><i>do not include the simulators</i></b>).
+ 
+The directory structure inside the archive should be 
+"{rollnumber1_rollnumber2_rollnumber3}/pintos/code/*". Your main program
+ should be saved as 
+"{rollnumber1_rollnumber2_rollnumber3}/pintos/newprogs/assignment1.c" 
+inside the archive. 
+
+</li><li><b>Report: </b>A <b><i>maximum of five page</i></b> PDF file 
+that briefly describes a brief summary of POSIX message queues and your 
+implementation in Pintos. The report should be saved as 
+"{rollnumber1_rollnumber2_rollnumber3}/pintos/report.pdf".
+</li></ul>
+<h2>Additional Instructions</h2>
+<li>The total size of submission <b><i>should not exceed 1MB</i></b>.</li>
+<li>The quality of both the source code and the report would affect your marks.</li> 
+<li><b><i>Points may be deducted for not following the submission conventions</i></b>.</li>
+
+<br>
+<table frame="BOX" rules="NONE" border="3">
+<tbody><tr><td>
+<b><i>Discussion is healthy, copying is not</i></b>. You are encouraged 
+to discuss the assignments, but you must implement the assignments 
+individually (within your team). It is fairly easy to detect copying 
+automatically. 
+<b>If any two submissions are found with "similar" pieces of code, the 
+respective students will be failed in the course (with no concern as to 
+who was the "source").</b> 
+It is your responsibility to protect your assignment from copying, and no pleas regarding the same would be heeded to.
+</td></tr>
+</tbody></table>
+
+<br>
+
+<b><i>Bonus Points</i></b> may be awarded for innovative ideas.
+
+
+<h2>Effort declaration</h2>
+You need to provide a declaration of the effort you put in this 
+assignment. For the same, you must fill in the entry corresponding to 
+assignment #1 and carry it to your viva. The effort declaration form can
+ be found <a href="http://web.cse.iitk.ac.in/users/subhajit/courses/CS330_Jul2012/EffortSheet.pdf">here</a>.
+
+<h2>Submission details</h2>
+You should mail your submission (as per the guidelines provided above) <b>to your assigned TA</b>. (Each team will be assigned a TA who will perform the grading of your submissions.)
+
+<h2>Queries</h2>
+Feel free to contact me (in person or via email) or meet your TAs about any queries that you may have.
+
+
+
+
+</body></html>
